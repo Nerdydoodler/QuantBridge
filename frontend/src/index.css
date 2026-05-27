@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-900 text-gray-100 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Light mode overrides */
+  .light body,
+  .light .bg-surface-900 { background-color: #f8fafc; }
+  .light .bg-surface-800 { background-color: #ffffff; }
+  .light .bg-surface-700 { background-color: #e2e8f0; }
+  .light .text-gray-100,
+  .light .text-white { color: #1e293b; }
+  .light .text-gray-200 { color: #334155; }
+  .light .text-gray-300 { color: #475569; }
+  .light .text-gray-400 { color: #64748b; }
+  .light .text-gray-500 { color: #94a3b8; }
+  .light .text-gray-600 { color: #cbd5e1; }
+  .light .border-surface-700\/50 { border-color: #e2e8f0; }
+  .light .border-surface-600 { border-color: #cbd5e1; }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-800 rounded-xl border border-surface-700/50 p-5 shadow-lg;
+  }
+
+  .light .card {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-700 hover:bg-surface-200/10 text-gray-200 font-medium px-4 py-2 rounded-lg border border-surface-200/10 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply bg-surface-800 border border-surface-200/20 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all;
+  }
+
+  .light .input-field {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #1e293b;
+  }
+
+  .badge-green {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-900/50 text-green-400;
+  }
+
+  .badge-red {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-900/50 text-red-400;
+  }
+}
+
+/* Colorblind mode filters */
+.cb-deuteranopia {
+  filter: url('#deuteranopia-filter') !important;
+}
+.cb-protanopia {
+  filter: url('#protanopia-filter') !important;
+}
+.cb-tritanopia {
+  filter: url('#tritanopia-filter') !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.2s ease-out;
+}
