@@ -22,7 +22,7 @@ const navItems = [
   { path: '/lists', label: 'Lists', icon: List },
   { path: '/analytics', label: 'Analytics', icon: Layers },
   { path: '/crypto', label: 'Crypto', icon: Bitcoin },
-  { path: '/forex', label: 'Forex', icon: DollarSign },
+  { path: '/forex', label: 'Foreign Exchange', icon: DollarSign },
   { path: '/news', label: 'News', icon: Newspaper },
   { path: '/screener', label: 'Screener', icon: TrendingUp },
 ]

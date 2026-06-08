@@ -1,4 +1,4 @@
-# FinSight - Private Financial Data Platform
+# QuantBridge - Private Financial Data Platform
 
 A self-hosted financial data platform providing real-time market data, technical analysis, cryptocurrency tracking, forex rates, and news aggregation. Built entirely from scratch for private server deployment.
 
@@ -16,7 +16,7 @@ A self-hosted financial data platform providing real-time market data, technical
 ## Architecture
 
 ```
-TestBB/
+QuantBridge/
 ├── backend/          # Python FastAPI REST API
 │   ├── app/
 │   │   ├── main.py           # Application entry point
@@ -76,7 +76,7 @@ Dashboard available at `http://localhost:5173`
 # Create .env file for backend
 cd backend
 cp .env.example .env
-# Edit .env with your settings (especially FINSIGHT_SECRET_KEY)
+# Edit .env with your settings (especially QUANTBRIDGE_SECRET_KEY)
 
 # Build and run
 cd ..
@@ -139,7 +139,7 @@ This is a private project. All code is original and written from scratch.
 
 ## Security Notes
 
-- Change `FINSIGHT_SECRET_KEY` in production
+- Change `QUANTBRIDGE_SECRET_KEY` in production
 - Use HTTPS via a reverse proxy (nginx/Caddy) in production
-- Restrict `FINSIGHT_CORS_ORIGINS` to your domain
+- Restrict `QUANTBRIDGE_CORS_ORIGINS` to your domain
 - Consider adding rate limiting for public-facing deployments

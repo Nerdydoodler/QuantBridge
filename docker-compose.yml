@@ -5,7 +5,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: finsight-api
+    container_name: quantbridge-api
     ports:
       - "8000:8000"
     env_file:
@@ -23,7 +23,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: finsight-web
+    container_name: quantbridge-web
     ports:
       - "3000:80"
     depends_on:
@@ -33,7 +33,7 @@ services:
   # Optional: Redis for caching
   redis:
     image: redis:7-alpine
-    container_name: finsight-redis
+    container_name: quantbridge-redis
     ports:
       - "6379:6379"
     restart: unless-stopped
