@@ -13,8 +13,19 @@ A self-hosted financial data platform providing real-time market data, technical
 - **Authentication** — JWT-based user accounts
 - **Search** — Symbol search across stocks and crypto
 
+![Diagram](QB_Home.png)
+
+![Diagram](QBListSettings.png)
+
+![Diagram](QBAnalyt.png)
+
+![Diagram](QBNews.png)
+
+![Diagram](QB_Screen.png)
 
 ## License
 
 This is a private project. All code is original and written from scratch.
+
+
 
